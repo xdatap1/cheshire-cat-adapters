@@ -1,0 +1,4 @@
+Flask[async]==2.1.1
+Flask-Cors==3.0.10
+websockets==10.1
+waitress==2.1.2

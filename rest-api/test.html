@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Application</title>
+    <script>
+        async function sendText() {
+            const text = document.getElementById('inputText').value;
+            const response = await fetch('http://localhost:3500/send_text', {
+                method: 'POST',
+                body: new FormData(document.getElementById('textForm'))
+            });
+            const data = await response.json();
+            document.getElementById('output').innerText = data.content;
+        }
+    </script>
+</head>
+<body>
+    <h1>Test Application</h1>
+    <form id="textForm">
+        <label for="inputText">Enter text:</label>
+        <input type="text" id="inputText" name="text">
+        <button type="button" onclick="sendText()">Send</button>
+    </form>
+    <h2>Received content:</h2>
+    <p id="output"></p>
+</body>
+</html>
