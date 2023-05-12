@@ -4,7 +4,7 @@
 This is a single-page application to interface [Cheshire Cat](https://github.com/pieroit/cheshire-cat) WebSocket. It could be used when developing a derivated application and needing a clean, more business-friendly web page to make a demo.
 
 ### Usage
-Just Open *index.html* with your browser; it must run from the same machine where the Cheshire Cat backend runs.
+Just Open **index.html** with your browser; it must run from the same machine where the Cheshire Cat backend runs.
 
 ![](screenshot.png)
 
